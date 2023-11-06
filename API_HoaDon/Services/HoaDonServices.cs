@@ -156,7 +156,7 @@ namespace API_HoaDon.Services
                                                 || x.TenHoaDon.ToLower().Contains(key.ToLower())).ToList();
 
 
-            var result = PageResult<HoaDon>.ToPageRusult(pagination, dsHoaDon);
+            var result = PageResult<HoaDon>.ToPageResult(pagination, dsHoaDon);
             pagination.TotalCount = dsHoaDon.Count();
             return new PageResult<HoaDon>(pagination, result);
         }
